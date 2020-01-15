@@ -59,7 +59,7 @@ export default class PrimaryVideoDisplay extends Vue {
   margin-top: 0;
 }
 .pvd-main__description .description__row {
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 .description__row .description__row-label {
