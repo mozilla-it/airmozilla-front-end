@@ -14,10 +14,13 @@ import Header from "@/components/header.vue";
 import PrimaryVideoDisplay from "@/components/primary-video-display.vue";
 
 export default {
-  name: "home",
+  name: "Home",
   components: {
     Header,
     PrimaryVideoDisplay
+  },
+  mounted() {
+    console.log("home");
   }
 };
 </script>

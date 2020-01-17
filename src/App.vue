@@ -12,6 +12,10 @@ p {
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   font-size: 16px;
 }

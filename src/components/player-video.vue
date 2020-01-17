@@ -1,19 +1,14 @@
 <template lang="html">
-  <section class="pvd">
-    <h2>Latest Content</h2>
-    <div class="pvd-main">
+  <section class="pv">
+    <div class="pv-main">
       <video
-        class="pvd-main__video"
+        class="pv-main__video"
         src="blob:https://d3jvl7e3uitd3.cloudfront.net/691bec63-8e7f-b64d-ac9d-f10233ff4768"
         controls
         autoplay
       ></video>
-      <aside class="pvd-main__description">
-        <h3 class="description__header">
-          <router-link class="header__link" to="/player/id"
-            >Project Meeting</router-link
-          >
-        </h3>
+      <aside class="pv-main__description">
+        <h3 class="description__header">Project Meeting</h3>
         <div class="description__row">
           <label class="description__row-label">Category: </label>
           <p class="description__row-value">MoCo Team Meetings</p>
@@ -29,6 +24,19 @@
             the org and other fun things.<br /><br />For more info, click
             <a href="#">here</a>
           </p>
+        </div>
+        <div class="description__row">
+          <label class="description__row-label">Level: </label>
+          <p class="description__row-value">
+            Public
+          </p>
+        </div>
+        <div class="description__row">
+          <label class="description__row-label">Tags: </label>
+          <ul class="description__row-value">
+            <li><a href="#">#ProjectMeetings</a></li>
+            <li><a href="#">#TeamMeetings</a></li>
+          </ul>
         </div>
       </aside>
     </div>
@@ -46,29 +54,23 @@ export default class PrimaryVideoDisplay extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.pvd-main {
+.pv-main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: top;
 }
 
-.pvd-main .pvd-main__video {
-  width: 60%;
+.pv-main .pv-main__video {
+  width: 100%;
 }
-.pvd-main .pvd-main__description {
-  margin-left: 2em;
+.pv-main .pv-main__description {
+  margin-top: 2em;
 }
 
-.pvd-main__description .description__header {
+.pv-main__description .description__header {
   margin-top: 0;
 }
-
-.description__header .header__link {
-  color: #000;
-  text-decoration: none;
-}
-
-.pvd-main__description .description__row {
+.pv-main__description .description__row {
   margin: 0.5em 0;
 }
 
@@ -80,5 +82,10 @@ export default class PrimaryVideoDisplay extends Vue {
 .description__row .description__row-value {
   margin-left: 0.5em;
   display: inline;
+}
+
+.description__row ul.description__row-value li {
+  display: inline;
+  margin-right: 0.5em;
 }
 </style>
