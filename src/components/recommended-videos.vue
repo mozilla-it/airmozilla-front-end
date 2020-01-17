@@ -2,50 +2,20 @@
   <section class="r">
     <h3>Recommended</h3>
     <div class="r-main">
-      <div class="r-main__item">
-        <video
-          class="item__video"
-          src="blob:https://d3jvl7e3uitd3.cloudfront.net/691bec63-8e7f-b64d-ac9d-f10233ff4768"
-          controls
-          autoplay
-        ></video>
-        <aside class="item__description">
-          <label class="description__label">Project Meeting </label>
-          <p class="description__value">November 27, 2019</p>
-        </aside>
-      </div>
-      <div class="r-main__item">
-        <video
-          class="item__video"
-          src="blob:https://d3jvl7e3uitd3.cloudfront.net/691bec63-8e7f-b64d-ac9d-f10233ff4768"
-          controls
-          autoplay
-        ></video>
-        <aside class="item__description">
-          <label class="description__label">Project Meeting </label>
-          <p class="description__value">November 27, 2019</p>
-        </aside>
-      </div>
-      <div class="r-main__item">
-        <video
-          class="item__video"
-          src="blob:https://d3jvl7e3uitd3.cloudfront.net/691bec63-8e7f-b64d-ac9d-f10233ff4768"
-          controls
-          autoplay
-        ></video>
-        <aside class="item__description">
-          <label class="description__label">Project Meeting </label>
-          <p class="description__value">November 27, 2019</p>
-        </aside>
-      </div>
+      <TertiaryVideoDisplay class="r-main__item" />
+      <TertiaryVideoDisplay class="r-main__item" />
+      <TertiaryVideoDisplay class="r-main__item" />
     </div>
   </section>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import TertiaryVideoDisplay from "./tertiary-video-display.vue";
 
-@Component
+@Component({
+  components: { TertiaryVideoDisplay }
+})
 export default class RecommendedVideos extends Vue {
   @Prop() private msg!: string;
 }

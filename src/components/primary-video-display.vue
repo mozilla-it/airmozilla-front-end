@@ -53,10 +53,11 @@ export default class PrimaryVideoDisplay extends Vue {
 }
 
 .pvd-main .pvd-main__video {
-  width: 60%;
+  flex: 5;
 }
 .pvd-main .pvd-main__description {
   margin-left: 2em;
+  flex: 3;
 }
 
 .pvd-main__description .description__header {
