@@ -6,7 +6,7 @@
         src="../assets/logo.svg"
         alt="Air Mozilla Logo"
       />
-      <input class="header__search" />
+      <input class="header__search" @change="handleInputChange" />
       <button class="header__signin">Sign In</button>
     </div>
   </header>
@@ -18,6 +18,11 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class Header extends Vue {
   @Prop() private msg!: string;
+  handleInputChange(e: KeyboardEvent) {
+    if (e.target instanceof HTMLInputElement) {
+      this.$router.push("/search?q=" + e.target.value);
+    }
+  }
 }
 </script>
 

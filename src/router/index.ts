@@ -2,10 +2,24 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/home.vue";
 import Player from "../views/player.vue";
+import Search from "../views/search.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/search",
+    name: "search",
+    component: Search
+  },
+  {
+    path: "/search",
+    query: {
+      q: ":q"
+    },
+    name: "search",
+    component: Search
+  },
   {
     path: "/player/:id",
     name: "player",
