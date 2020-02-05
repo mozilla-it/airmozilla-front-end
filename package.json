@@ -67,5 +67,20 @@
   ],
   "jest": {
     "preset": "@vue/cli-plugin-unit-jest/presets/typescript-and-babel"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla-it/airmozilla-front-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mozilla-it/airmozilla-front-end/issues"
+  },
+  "homepage": "https://github.com/mozilla-it/airmozilla-front-end#readme"
 }
